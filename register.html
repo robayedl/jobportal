@@ -1,0 +1,53 @@
+<html>
+	<head>
+	<title>Job Portal | Registration</title>
+		<link rel="stylesheet" href="bootstrap.min.css">
+		<style>
+			.content {
+				max-width: 500px;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<h1><b>Welcome to Job Portal</b></h1>
+		</div><br><br><br>
+		<nav class="navbar navbar-expand-md bg-dark mb-4">
+			<div class="container-fluid">
+				<div class="collapse navbar-collapse" >
+					<div class="navbar-nav">
+						<a href="home.html" class="nav-link">Home</a>
+						<a href="about.php" class="nav-link">About</a>
+					</div>
+					<div class="navbar-nav ml-auto">
+						<a href="register.html" class="nav-link">Register</a>
+						<a href="login.html" class="nav-link">Login</a>
+					</div>
+				</div>
+			</div>    
+		</nav><br><br>
+		
+		<div class="container form-group">	
+			<b style="color:red">* means required</b><br><br>
+			<form action="register.php" method="POST" name="f">
+				<b>Username*:</b> <input type="text" class="form-control" name="username" required /> <br>
+				<b>Password*:</b> <input type="password" class="form-control" name="password1" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{0,}$" required /> <br>
+				<b>Confirm Password*:</b> <input type="password" class="form-control" name="password2" required /> <br>
+				<b>Email*:</b> <input type="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
+				<b>Address*:</b> <input type="textarea" class="form-control" name="address" required><br>
+				<b>Gender*:  </b><input type="radio" class="form-check-input" name="gender" value="male" required>Male <input type="radio" class="form-check-input" name="gender" value="female" required>Female <input type="radio" class="form-check-input" name="gender" value="others" required>Others <br><br>
+				<b>Role*: </b>
+				<select name="role" required>
+					<option value="1">Job Seeker</option>
+					<option value="2">Employer</option>
+				</select><br><br>
+				<input type="submit" value="Register" ><br>		
+			</form>
+		</div>
+		
+		
+		
+	</body>
+
+</html>
